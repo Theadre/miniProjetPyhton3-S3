@@ -39,7 +39,7 @@ for e in listNote:
     listNoteHtml += f"La note {e[0]} pour le cours {e[1]} ({e[2]}) a ete ajoutee pour l'etudiant {e[3]} {e[4]}<br>"
     
 
-navbar =  open('index.py','+r').read() 
+navbar =  open('navbar.html','+r').read() 
 html = f"""<!DOCTYPE html>
 <head>
     <title>Groupf</title>

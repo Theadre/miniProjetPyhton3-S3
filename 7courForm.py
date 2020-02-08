@@ -21,7 +21,7 @@ listHtml = ''
 for row in list:
     listHtml += f'intitule : {row[1]}, annee {row[2]} <br>'
 
-navbar =  open('index.py','+r').read() 
+navbar =  open('navbar.html','+r').read() 
         
 html = f"""<!DOCTYPE html>
 <head>

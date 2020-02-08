@@ -23,7 +23,7 @@ listHtml = ''
 for row in list:
     listHtml += f'nom : {row[1]}, prenom {row[2]}, age {row[3]} <br>'
 
-navbar =  open('index.py','+r').read() 
+navbar =  open('navbar.html','+r').read() 
         
 
 html = f"""<!DOCTYPE html>

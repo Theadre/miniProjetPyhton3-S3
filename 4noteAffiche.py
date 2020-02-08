@@ -37,7 +37,7 @@ listEtudiantHtml = ''
 for e in listEtudiant :
     listEtudiantHtml += f'{e[0]}. {e[1]} {e[2]} ({e[2]})<br>'
 
-navbar =  open('index.py','+r').read() 
+navbar =  open('navbar.html','+r').read() 
 html = f"""<!DOCTYPE html>
 <head>
     <title>Groupe f</title>

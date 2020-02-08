@@ -38,7 +38,7 @@ for e in listCours:
 
 
 
-navbar =  open('index.py','+r').read() 
+navbar =  open('navbar.html','+r').read() 
 html = f"""<!DOCTYPE html>
 <head>
     <title>Groupe f</title>

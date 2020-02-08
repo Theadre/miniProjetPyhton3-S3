@@ -1,14 +1,14 @@
 from mydb import Db
-# import pymysql
+from config import Config
 import cgi
-# # import pymysql
+
 form = cgi.FieldStorage()
 print("Content-type: text/html; charset=utf-8\n")
 
-# except BaseException as e:  print('database creation error' + str(e))
+
+
 
 # sql
-databaseSql = 'create database db_python;'
 
 coursSql = f"""
 create table if not EXISTS Cours(
@@ -37,21 +37,26 @@ create table if not EXISTS Note(
     FOREIGN KEY (id_cours) REFERENCES Cours(id)
 );
 """
-navbar =  open('index.py','+r').read() 
+navbar =  open('navbar.html','+r').read() 
 
 print(navbar)
 
+
 db = Db()
 
+
+    
+# 2 - create
+# db.updateDataBase(f'DROP DATABASE IF EXISTS {Config.db};')
+db.updateDataBase(f'create database if not EXISTS {Config.db};')
+db.updateDataBase(f'use {Config.db};')
+print(f'database {Config.db} created successfully<br>')
+
 # 1- drop if existe
-db.updateDataBase('DROP DATABASE IF EXISTS db_python')
+
 db.updateTable('DROP TABLE IF EXISTS note')
 db.updateTable('DROP TABLE IF EXISTS etudiant')
 db.updateTable('DROP TABLE IF EXISTS cours')
-    
-# 2 - create
-db.updateDataBase('create database if not EXISTS db_python;')
-print('database groupef created successfully<br>')
 
 db.updateTable(etudiantSql)
 print('Table etudiant created successfully<br>')
@@ -89,4 +94,4 @@ list3 = db.getQuery(f"""
     """)
     
 [print(f"La note {e[0]} pour le cours {e[1]} ({e[3]} ans)<br>") for e in list3]
-
+    
