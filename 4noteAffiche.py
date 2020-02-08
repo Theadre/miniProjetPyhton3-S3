@@ -57,6 +57,5 @@ html = f"""<!DOCTYPE html>
 </body>
 </html>
 """
-# Note de {etudiantSelectionne[0]} {etudiantSelectionne[1]} ({etudiantSelectionne[2]} ans): <br>
 print(html)
 

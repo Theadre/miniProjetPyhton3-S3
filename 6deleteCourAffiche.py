@@ -14,9 +14,9 @@ if str(id_cours) != "None":
 
     e = db.getOneQuery(f"select * from cours where id = {id_cours}")
 
-    r2 = db.updateQuery(f"delete from note where id_cours = {id_cours}")
+    db.updateQuery(f"delete from note where id_cours = {id_cours}")
 
-    r1 = db.updateQuery(f"delete from cours where id = {id_cours}")
+    db.updateQuery(f"delete from cours where id = {id_cours}")
     
     msg = f'Le cours {e[1]} ({e[2]}) et les notes associees ont ete supprimes'
 
