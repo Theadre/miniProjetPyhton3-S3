@@ -1,0 +1,7 @@
+* On suppose que le serveur MySQL est déjà en train de tourner
+* Lancer le serveur web en exécutant le code "runWebServer.py"
+* Ouvrir ensuite dans un navigateur l'URL http://localhost:8888/:
+    => cela doit afficher une erreur 403
+* Ensuite tester le projet en ouvrant: http://localhost:8888/index.py
+
+Attention, tous vos fichiers .py doivent être exécutables !
